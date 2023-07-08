@@ -4,49 +4,49 @@
     "name": "Pastel de Zanahoria",
     "description": "Pastel húmedo de zanahoria con nueces y crema de queso.",
     "price": 4.5,
-    "image": "https://drive.google.com/file/d/1SVnk6TCoRbiNjk8HEyDg4fFRBJg2ilOp/view"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/cakea%C3%B1onuevo.jpg?alt=media&token=fea53b4e-24f3-4491-b9a0-b932db9da068"
   },
   {
     "id": 2,
     "name": "Tarta de Limón",
     "description": "Tarta refrescante de limón con una base de galleta y merengue.",
     "price": 4.75,
-    "image": "https://example.com/imagenes/tarta_limon.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/image01.jpg?alt=media&token=82facabe-a79b-4d54-8cdb-28c0e07316cf"
   },
   {
     "id": 3,
     "name": "Croissant de Almendra",
     "description": "Croissant hojaldrado relleno de almendras y glaseado de azúcar.",
     "price": 2.25,
-    "image": "https://example.com/imagenes/croissant_almendra.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/image02.jpg?alt=media&token=9a5f6c51-9d5a-49da-b637-d112a8b02ff7"
   },
   {
     "id": 4,
     "name": "Donut de Vainilla",
     "description": "Donut esponjoso de vainilla con glaseado de colores y sprinkles.",
     "price": 1.75,
-    "image": "https://example.com/imagenes/donut_vainilla.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/image03.jpg?alt=media&token=6a1f0a1f-757e-4674-8b1b-92b7fdf938b1"
   },
   {
     "id": 5,
     "name": "Tartaleta de Frutas",
     "description": "Tartaleta crujiente con una mezcla de frutas frescas y crema pastelera.",
     "price": 3.5,
-    "image": "https://example.com/imagenes/tartaleta_frutas.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/image04.jpg?alt=media&token=1652e201-e427-4f68-aff6-59239623c81b"
   },
   {
     "id": 6,
     "name": "Magdalenas de Vainilla",
     "description": "Magdalenas esponjosas de vainilla con un toque de limón.",
     "price": 1.5,
-    "image": "https://example.com/imagenes/magdalenas_vainilla.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen05.jpg?alt=media&token=c31e95dd-c201-4af2-aa3c-79903302ce80"
   },
   {
     "id": 7,
     "name": "Brownie de Nuez",
     "description": "Brownie denso y chocolatoso con trozos de nueces.",
     "price": 2.75,
-    "image": "https://example.com/imagenes/brownie_nuez.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen06.jpg?alt=media&token=ff7e58d5-a1c6-4624-ba48-21fc5a6cd472"
   },
   {
     "id": 8,
@@ -60,83 +60,83 @@
     "name": "Cupcake de Vainilla",
     "description": "Cupcake de vainilla con cobertura de buttercream y decoración colorida.",
     "price": 2.25,
-    "image": "https://example.com/imagenes/cupcake_vainilla.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen07.jpg?alt=media&token=11a0b266-84fd-4973-80af-cf9b92b4ea26"
   },
   {
     "id": 10,
     "name": "Galletas de Chocolate",
     "description": "Galletas crujientes de chocolate con trocitos de chocolate negro.",
     "price": 1.5,
-    "image": "https://example.com/imagenes/galletas_chocolate.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen08.jpg?alt=media&token=d26ee9a6-55ba-4b70-bd20-b482e9d3af03"
   },
   {
     "id": 11,
     "name": "Croissant de Chocolate",
     "description": "Croissant de hojaldre relleno de chocolate y espolvoreado con azúcar glas.",
     "price": 2.5,
-    "image": "https://example.com/imagenes/croissant_chocolate.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen09.jpg?alt=media&token=c0ed5e1e-3160-4ef1-b04d-ac344e9bed00"
   },
   {
     "id": 12,
     "name": "Tarta de Manzana",
     "description": "Tarta clásica de manzana con una capa de crumble por encima.",
     "price": 3.75,
-    "image": "https://example.com/imagenes/tarta_manzana.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen09.jpg?alt=media&token=c0ed5e1e-3160-4ef1-b04d-ac344e9bed00"
   },
   {
     "id": 13,
     "name": "Bollo de Canela",
     "description": "Bollo esponjoso con un delicioso relleno de canela y azúcar.",
     "price": 2.0,
-    "image": "https://example.com/imagenes/bollo_canela.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen11.jpg?alt=media&token=3dcaed15-1669-4a66-9550-70f83e1b813f"
   },
   {
     "id": 14,
     "name": "Muffin de Chocolate",
     "description": "Muffin de chocolate con chispas de chocolate y un interior suave.",
     "price": 2.25,
-    "image": "https://example.com/imagenes/muffin_chocolate.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen12.jpg?alt=media&token=0f6d90ec-31cc-4e42-9641-fa8fddf5f1cc"
   },
   {
     "id": 15,
     "name": "Tarta de Fresa",
     "description": "Tarta clásica de fresas frescas con crema pastelera y masa quebrada.",
     "price": 4.5,
-    "image": "https://example.com/imagenes/tarta_fresa.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen13.jpg?alt=media&token=bbb88239-2182-4066-85cc-5195b3006e36"
   },
   {
     "id": 16,
     "name": "Rosquilla de Azúcar",
     "description": "Rosquilla esponjosa cubierta con azúcar glas.",
     "price": 1.25,
-    "image": "https://example.com/imagenes/rosquilla_azucar.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen14.jpg?alt=media&token=695e4ac7-16f6-4a00-afc2-9ef4c492304d"
   },
   {
     "id": 17,
     "name": "Brazo de Gitano",
     "description": "Delicioso bizcocho enrollado con crema y decorado con azúcar glas.",
     "price": 3.25,
-    "image": "https://example.com/imagenes/brazo_gitano.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen17.jpg?alt=media&token=c7d16666-d338-47de-96ba-adf5b345c347"
   },
   {
     "id": 18,
     "name": "Tarta de Coco",
     "description": "Tarta cremosa de coco con un toque tropical.",
     "price": 3.75,
-    "image": "https://example.com/imagenes/tarta_coco.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen18.jpg?alt=media&token=48d3e82b-b6c1-41ff-89cd-75425adfde7d"
   },
   {
     "id": 19,
     "name": "Palmera de Chocolate",
     "description": "Palmera de hojaldre cubierta de chocolate.",
     "price": 1.75,
-    "image": "https://example.com/imagenes/palmera_chocolate.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen19.jpg?alt=media&token=ea6958bc-3977-45e7-8361-2dd50a37a22a"
   },
   {
     "id": 20,
     "name": "Tarta de Durazno",
     "description": "Tarta jugosa de durazno con crema de vainilla y masa crujiente.",
     "price": 4.25,
-    "image": "https://example.com/imagenes/tarta_durazno.jpg"
+    "image": "https://firebasestorage.googleapis.com/v0/b/amathelabakery.appspot.com/o/imagen20.jpg?alt=media&token=038773b2-ba2a-4058-b92b-f718e762bb54"
   }
 ]
