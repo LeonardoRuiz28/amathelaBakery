@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Pastel de Zanahoria",
+    "description": "Pastel húmedo de zanahoria con nueces y crema de queso.",
+    "price": 4.5,
+    "image": "https://example.com/imagenes/pastel_zanahoria.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tarta de Limón",
+    "description": "Tarta refrescante de limón con una base de galleta y merengue.",
+    "price": 4.75,
+    "image": "https://example.com/imagenes/tarta_limon.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Croissant de Almendra",
+    "description": "Croissant hojaldrado relleno de almendras y glaseado de azúcar.",
+    "price": 2.25,
+    "image": "https://example.com/imagenes/croissant_almendra.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Donut de Vainilla",
+    "description": "Donut esponjoso de vainilla con glaseado de colores y sprinkles.",
+    "price": 1.75,
+    "image": "https://example.com/imagenes/donut_vainilla.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tartaleta de Frutas",
+    "description": "Tartaleta crujiente con una mezcla de frutas frescas y crema pastelera.",
+    "price": 3.5,
+    "image": "https://example.com/imagenes/tartaleta_frutas.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Magdalenas de Vainilla",
+    "description": "Magdalenas esponjosas de vainilla con un toque de limón.",
+    "price": 1.5,
+    "image": "https://example.com/imagenes/magdalenas_vainilla.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Brownie de Nuez",
+    "description": "Brownie denso y chocolatoso con trozos de nueces.",
+    "price": 2.75,
+    "image": "https://example.com/imagenes/brownie_nuez.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tarta de Queso",
+    "description": "Tarta de queso suave y cremosa con una base de galleta.",
+    "price": 4.25,
+    "image": "https://example.com/imagenes/tarta_queso.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Cupcake de Vainilla",
+    "description": "Cupcake de vainilla con cobertura de buttercream y decoración colorida.",
+    "price": 2.25,
+    "image": "https://example.com/imagenes/cupcake_vainilla.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Galletas de Chocolate",
+    "description": "Galletas crujientes de chocolate con trocitos de chocolate negro.",
+    "price": 1.5,
+    "image": "https://example.com/imagenes/galletas_chocolate.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Croissant de Chocolate",
+    "description": "Croissant de hojaldre relleno de chocolate y espolvoreado con azúcar glas.",
+    "price": 2.5,
+    "image": "https://example.com/imagenes/croissant_chocolate.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Tarta de Manzana",
+    "description": "Tarta clásica de manzana con una capa de crumble por encima.",
+    "price": 3.75,
+    "image": "https://example.com/imagenes/tarta_manzana.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Bollo de Canela",
+    "description": "Bollo esponjoso con un delicioso relleno de canela y azúcar.",
+    "price": 2.0,
+    "image": "https://example.com/imagenes/bollo_canela.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Muffin de Chocolate",
+    "description": "Muffin de chocolate con chispas de chocolate y un interior suave.",
+    "price": 2.25,
+    "image": "https://example.com/imagenes/muffin_chocolate.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Tarta de Fresa",
+    "description": "Tarta clásica de fresas frescas con crema pastelera y masa quebrada.",
+    "price": 4.5,
+    "image": "https://example.com/imagenes/tarta_fresa.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Rosquilla de Azúcar",
+    "description": "Rosquilla esponjosa cubierta con azúcar glas.",
+    "price": 1.25,
+    "image": "https://example.com/imagenes/rosquilla_azucar.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Brazo de Gitano",
+    "description": "Delicioso bizcocho enrollado con crema y decorado con azúcar glas.",
+    "price": 3.25,
+    "image": "https://example.com/imagenes/brazo_gitano.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Tarta de Coco",
+    "description": "Tarta cremosa de coco con un toque tropical.",
+    "price": 3.75,
+    "image": "https://example.com/imagenes/tarta_coco.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Palmera de Chocolate",
+    "description": "Palmera de hojaldre cubierta de chocolate.",
+    "price": 1.75,
+    "image": "https://example.com/imagenes/palmera_chocolate.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Tarta de Durazno",
+    "description": "Tarta jugosa de durazno con crema de vainilla y masa crujiente.",
+    "price": 4.25,
+    "image": "https://example.com/imagenes/tarta_durazno.jpg"
+  }
+]
