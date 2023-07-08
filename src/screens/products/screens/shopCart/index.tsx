@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   View,
@@ -8,9 +9,16 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { ICartProduct } from "../../../../models/product";
-import { IRootState, useAppSelector } from "../../../../redux/core";
+import {
+  IRootState,
+  useAppDispatch,
+  useAppSelector,
+} from "../../../../redux/core";
+import { updateShopCart } from "../../../../redux/reducers/products/productsActions";
 
 const ShopCartScreen: React.FC = () => {
+  const navigation = useNavigation();
+  const dispatch = useAppDispatch();
   const { shopCart } = useAppSelector(
     (state: IRootState) => state.productReducer
   );
@@ -18,7 +26,16 @@ const ShopCartScreen: React.FC = () => {
   const renderCartItem = ({ item }: { item: ICartProduct }) => {
     const { product, quantity, totalPrice } = item;
 
-    const onRemoveProduct = (id: number) => {};
+    const onRemoveProduct = (id: number) => {
+      const updatedCart = shopCart.filter(
+        (cartProduct) => cartProduct.product.id !== id
+      );
+      dispatch(updateShopCart(updatedCart));
+    };
+
+    const onEditProduct = (id: number) => {
+      navigation.navigate("ProductDetail" as never, { id } as never);
+    };
 
     return (
       <View style={styles.cartItemContainer}>
@@ -27,9 +44,14 @@ const ShopCartScreen: React.FC = () => {
           <Text style={styles.cartItemName}>{product.name}</Text>
           <Text style={styles.cartItemQuantity}>Cantidad: {quantity}</Text>
           <Text style={styles.cartItemPrice}>Precio total: ${totalPrice}</Text>
-          <TouchableOpacity onPress={() => onRemoveProduct(product.id)}>
-            <Text style={styles.removeButton}>Eliminar</Text>
-          </TouchableOpacity>
+          <View style={{ display: "flex", flexDirection: "row", gap: 10 }}>
+            <TouchableOpacity onPress={() => onRemoveProduct(product.id)}>
+              <Text style={styles.removeButton}>Eliminar</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => onEditProduct(product.id)}>
+              <Text style={styles.removeButton}>Editar</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     );
@@ -43,9 +65,15 @@ const ShopCartScreen: React.FC = () => {
           keyExtractor={(item) => item.product.id.toString()}
           renderItem={renderCartItem}
           contentContainerStyle={styles.cartList}
+          style={styles.cartListContainer}
         />
       ) : (
-        <Text style={styles.emptyCartText}>Your cart is empty.</Text>
+        <Text style={styles.emptyCartText}>Tu carrito está vacío.</Text>
+      )}
+      {shopCart.length > 0 && (
+        <TouchableOpacity style={styles.buyButton}>
+          <Text style={styles.buyButtonText}>Comprar</Text>
+        </TouchableOpacity>
       )}
     </View>
   );
@@ -57,10 +85,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     padding: 20,
   },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
+  cartListContainer: {
+    maxHeight: 400,
   },
   cartList: {
     flexGrow: 1,
@@ -101,6 +127,19 @@ const styles = StyleSheet.create({
   emptyCartText: {
     fontSize: 18,
     textAlign: "center",
+  },
+  buyButton: {
+    backgroundColor: "#e67e22",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 5,
+    marginTop: 20,
+    alignItems: "center",
+  },
+  buyButtonText: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });
 
