@@ -4,6 +4,7 @@ import TwoColumnList from "../../components/TwoColumnList";
 import products from "../../data/product.db.json";
 import { IRootState, useAppSelector } from "../../redux/core";
 import { useNavigation } from "@react-navigation/native";
+import { FontAwesome } from "@expo/vector-icons";
 
 const ProductsScreen = () => {
   const navigation = useNavigation();
@@ -13,10 +14,17 @@ const ProductsScreen = () => {
   return (
     <View style={{ flex: 1, flexDirection: "row" }}>
       {shopCart.length > 0 && (
-        <TouchableOpacity style={styles.shopCartIcon} onPress={()=>{
-          navigation.navigate("ShopCart" as never)
-        }}>
-          <Text>Cart</Text>
+        <TouchableOpacity
+          style={styles.shopCartIcon}
+          onPress={() => {
+            navigation.navigate("ShopCart" as never);
+          }}
+        >
+          <FontAwesome
+            color={"white"}
+            name="shopping-cart"
+            size={30}
+          />
         </TouchableOpacity>
       )}
       <TwoColumnList products={products} />
