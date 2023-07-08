@@ -1,18 +1,23 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { setProducts } from "./productsActions";
+import { ICartProduct } from "../../../models/product";
+import { setShopCartProduct, updateShopCart } from "./productsActions";
 
 interface IProductsState {
-  product: string;
+  shopCart: ICartProduct[];
 }
 
 const initialState: IProductsState = {
-  product: "",
+  shopCart: [],
 };
 
 const productReducer = createReducer(initialState, (builder) =>
-  builder.addCase(setProducts, (state, action) => {
-    state.product = action.payload;
-  })
+  builder
+    .addCase(setShopCartProduct, (state, action) => {
+      state.shopCart.push(action.payload);
+    })
+    .addCase(updateShopCart, (state, action) => {
+      state.shopCart = action.payload;
+    })
 );
 
-export default productReducer
+export default productReducer;

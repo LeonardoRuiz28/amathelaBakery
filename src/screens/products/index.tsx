@@ -6,7 +6,6 @@ import products from "../../data/product.db.json";
 const ProductsScreen = () => {
   return (
     <View>
-      <Text style={styles.title}>Productos</Text>
       <TwoColumnList products={products} />
     </View>
   );
@@ -14,9 +13,4 @@ const ProductsScreen = () => {
 
 export default ProductsScreen;
 
-const styles = StyleSheet.create({
-  title: {
-    textAlign: "center",
-    fontSize: 30,
-  },
-});
+const styles = StyleSheet.create({});

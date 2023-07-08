@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {
   View,
@@ -6,6 +7,7 @@ import {
   StyleSheet,
   Dimensions,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import { IProduct } from "../../models/product";
 
@@ -14,13 +16,22 @@ interface Props {
 }
 
 const TwoColumnList: React.FC<Props> = ({ products }) => {
+  const navigation = useNavigation();
+
+  const handleProductPress = (product: IProduct) => {
+    navigation.navigate("ProductDetail" as never, { id: product.id } as never);
+  };
+
   const renderItem = ({ item }: { item: IProduct }) => (
-    <View style={styles.itemContainer}>
+    <TouchableOpacity
+      style={styles.itemContainer}
+      onPress={() => handleProductPress(item)}
+    >
       <Image source={{ uri: item.image }} style={styles.itemImage} />
       <Text style={styles.itemName}>{item.name}</Text>
       <Text style={styles.itemDescription}>{item.description}</Text>
       <Text style={styles.itemPrice}>${item.price}</Text>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
