@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -22,6 +22,14 @@ const ShopCartScreen: React.FC = () => {
   const { shopCart } = useAppSelector(
     (state: IRootState) => state.productReducer
   );
+
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    let _totalPrice = 0;
+    shopCart.map((e) => (_totalPrice = _totalPrice + e.totalPrice));
+    setTotalPrice(_totalPrice);
+  }, [shopCart]);
 
   const renderCartItem = ({ item }: { item: ICartProduct }) => {
     const { product, quantity, totalPrice } = item;
@@ -69,6 +77,17 @@ const ShopCartScreen: React.FC = () => {
         />
       ) : (
         <Text style={styles.emptyCartText}>Tu carrito está vacío.</Text>
+      )}
+      {shopCart.length > 0 && (
+        <Text
+          style={{
+            ...styles.buyButtonText,
+            color: "black",
+            textAlign: "center",
+          }}
+        >
+          Precio Total: {totalPrice}
+        </Text>
       )}
       {shopCart.length > 0 && (
         <TouchableOpacity style={styles.buyButton}>

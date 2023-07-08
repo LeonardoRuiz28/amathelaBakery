@@ -59,6 +59,7 @@ const ProductDetailScreen: React.FC = () => {
         return {
           ...cartProduct,
           quantity,
+          totalPrice: product.price * quantity,
         };
       }
       return cartProduct;
