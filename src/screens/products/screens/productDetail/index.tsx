@@ -3,24 +3,43 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { ICartProduct, IProduct } from "../../../../models/product";
 import products from "../../../../data/product.db.json";
-import { useAppDispatch } from "../../../../redux/core";
-import { setShopCartProduct } from "../../../../redux/reducers/products/productsActions";
+import {
+  IRootState,
+  useAppDispatch,
+  useAppSelector,
+} from "../../../../redux/core";
+import {
+  setShopCartProduct,
+  updateShopCart,
+} from "../../../../redux/reducers/products/productsActions";
 
 const ProductDetailScreen: React.FC = () => {
   const route = useRoute();
   const navigation = useNavigation();
   const dispatch = useAppDispatch();
   const { id } = route.params as { id: number };
+  const [existOnCart, setExistOnCart] = useState(false);
   const [currentProduct, setcurrentProduct] = useState<IProduct>();
   const [quantity, setQuantity] = useState(1);
+  const { shopCart } = useAppSelector(
+    (state: IRootState) => state.productReducer
+  );
 
   useEffect(() => {
     getProduct(id);
   }, []);
 
   const getProduct = (_id: number) => {
-    const _product = products.find((e) => e.id === _id);
-    setcurrentProduct(_product);
+    const existOnCart = shopCart.find((e) => e.product.id === id);
+    if (existOnCart) {
+      setExistOnCart(true);
+      setcurrentProduct(existOnCart.product);
+      setQuantity(existOnCart.quantity);
+    } else {
+      setExistOnCart(false);
+      const _product = products.find((e) => e.id === _id);
+      setcurrentProduct(_product);
+    }
   };
 
   const handleAddToCart = (product: IProduct, quantity: number) => {
@@ -31,6 +50,20 @@ const ProductDetailScreen: React.FC = () => {
     };
 
     dispatch(setShopCartProduct(shopCartProduct));
+    navigation.goBack();
+  };
+
+  const handleUpdateProduct = (product: IProduct, quantity: number) => {
+    const updatedCart = shopCart.map((cartProduct) => {
+      if (cartProduct.product.id === product.id) {
+        return {
+          ...cartProduct,
+          quantity,
+        };
+      }
+      return cartProduct;
+    });
+    dispatch(updateShopCart(updatedCart));
     navigation.goBack();
   };
 
@@ -59,9 +92,15 @@ const ProductDetailScreen: React.FC = () => {
       </View>
       <TouchableOpacity
         style={styles.addToCartButton}
-        onPress={() => handleAddToCart(currentProduct, quantity)}
+        onPress={() => {
+          !existOnCart
+            ? handleAddToCart(currentProduct, quantity)
+            : handleUpdateProduct(currentProduct, quantity);
+        }}
       >
-        <Text style={styles.addToCartButtonText}>Añadir al carrito</Text>
+        <Text style={styles.addToCartButtonText}>{`${
+          !existOnCart ? "Añadir al carrito" : "Actualizar en carrito"
+        }`}</Text>
       </TouchableOpacity>
     </View>
   ) : (
@@ -77,6 +116,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    paddingHorizontal: 8,
   },
   image: {
     width: 200,
