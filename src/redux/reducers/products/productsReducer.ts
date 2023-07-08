@@ -9,8 +9,10 @@ const initialState: IProductsState = {
   product: "",
 };
 
-createReducer(initialState, (builder) =>
+const productReducer = createReducer(initialState, (builder) =>
   builder.addCase(setProducts, (state, action) => {
     state.product = action.payload;
   })
 );
+
+export default productReducer
