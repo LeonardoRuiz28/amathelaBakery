@@ -23,7 +23,6 @@ function ProductStack() {
         name="ShopCart"
         component={ShopCartScreen}
         options={{ title: "Carrito de compras" }}
-        initialParams={{ id: 0 }}
       />
     </Stack.Navigator>
   );
