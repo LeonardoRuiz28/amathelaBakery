@@ -65,6 +65,10 @@ const ShopCartScreen: React.FC = () => {
     );
   };
 
+  const onBuy = () => {
+    /* TODO: Actions to buy */
+  };
+
   return (
     <View style={styles.container}>
       {shopCart.length > 0 ? (
@@ -90,7 +94,12 @@ const ShopCartScreen: React.FC = () => {
         </Text>
       )}
       {shopCart.length > 0 && (
-        <TouchableOpacity style={styles.buyButton}>
+        <TouchableOpacity
+          style={styles.buyButton}
+          onPress={() => {
+            onBuy();
+          }}
+        >
           <Text style={styles.buyButtonText}>Comprar</Text>
         </TouchableOpacity>
       )}
