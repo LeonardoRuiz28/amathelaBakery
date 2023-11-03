@@ -12,14 +12,19 @@ const AboutUsScreen = () => {
     Linking.openURL(url);
   };
 
+  const openWspp = ()=>
+  {
+    Linking.openURL('whatsapp://send?text=HelloAmathela&phone=939502762')
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Acerca de nosotros</Text>
       <Text style={styles.description}>
-        Amathela Pastry | Pastelería Artesanal Tienda de postres • Cakes •
-        Bocaditos • Postres • Boxes • 📍 CC Open Plaza - La Marina
+        Amathela Pastry | Pastelería Artesanal Tienda de postres • Cakes • Bocaditos • Postres • Boxes
       </Text>
       <Text style={styles.description}>Ama y comparte tu día con un postre</Text>
+      <Text style={styles.description}>Ubicanos : 📍 CC Open Plaza - La Marina</Text>
       <View style={styles.contactContainer}>
         <Text style={styles.contactText}>Contact us: {phoneNumber}</Text>
         <View style={styles.socialMediaContainer}>
@@ -33,7 +38,7 @@ const AboutUsScreen = () => {
             color={'#1DA1F2'}
             name="twitter"
             style={styles.socialIcon}
-            onPress={() => openUrl(twitterUrl)}
+            onPress={() => openWspp()}
           />
           <FontAwesome
           color={'#833AB4'}
@@ -61,7 +66,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   description: {
-    fontSize: 16,
+    fontSize: 12,
     textAlign: "center",
   },
   contactContainer: {

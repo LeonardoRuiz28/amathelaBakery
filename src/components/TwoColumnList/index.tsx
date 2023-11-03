@@ -23,6 +23,7 @@ const TwoColumnList: React.FC<Props> = ({ products }) => {
   };
 
   const renderItem = ({ item }: { item: IProduct }) => (
+    
     <TouchableOpacity
       style={styles.itemContainer}
       onPress={() => handleProductPress(item)}
@@ -34,8 +35,8 @@ const TwoColumnList: React.FC<Props> = ({ products }) => {
     </TouchableOpacity>
   );
 
-  return (
-    <FlatList
+  return (    
+    <FlatList    
       data={products}
       keyExtractor={(item) => item.id.toString()}
       numColumns={2}

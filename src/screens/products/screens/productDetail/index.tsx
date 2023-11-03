@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity,ImageBackground } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { ICartProduct, IProduct } from "../../../../models/product";
 import products from "../../../../data/product.db.json";
@@ -12,6 +12,7 @@ import {
   setShopCartProduct,
   updateShopCart,
 } from "../../../../redux/reducers/products/productsActions";
+import info from "../../../../data/info.db.json";
 
 const ProductDetailScreen: React.FC = () => {
   const route = useRoute();
@@ -69,6 +70,9 @@ const ProductDetailScreen: React.FC = () => {
   };
 
   return currentProduct ? (
+    <ImageBackground
+    source={{ uri: info.image }}
+    style={{ flex: 1 }}>
     <View style={styles.container}>
       <Image source={{ uri: currentProduct.image }} style={styles.image} />
       <View style={styles.detailsContainer}>
@@ -104,6 +108,7 @@ const ProductDetailScreen: React.FC = () => {
         }`}</Text>
       </TouchableOpacity>
     </View>
+    </ImageBackground>
   ) : (
     <View>
       <Text>Cargando...</Text>
@@ -114,7 +119,6 @@ const ProductDetailScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 8,

@@ -7,6 +7,7 @@ import {
   Image,
   FlatList,
   TouchableOpacity,
+  ImageBackground,
 } from "react-native";
 import { ICartProduct } from "../../../../models/product";
 import {
@@ -15,6 +16,7 @@ import {
   useAppSelector,
 } from "../../../../redux/core";
 import { updateShopCart } from "../../../../redux/reducers/products/productsActions";
+import info from "../../../../data/info.db.json";
 
 const ShopCartScreen: React.FC = () => {
   const navigation = useNavigation();
@@ -50,6 +52,7 @@ const ShopCartScreen: React.FC = () => {
         <Image source={{ uri: product.image }} style={styles.cartItemImage} />
         <View style={styles.cartItemDetails}>
           <Text style={styles.cartItemName}>{product.name}</Text>
+          <Text style={styles.cartItemQuantity}>Unidad: S/{product.price}</Text>
           <Text style={styles.cartItemQuantity}>Cantidad: {quantity}</Text>
           <Text style={styles.cartItemPrice}>Precio total: ${totalPrice}</Text>
           <View style={{ display: "flex", flexDirection: "row", gap: 10 }}>
@@ -70,6 +73,9 @@ const ShopCartScreen: React.FC = () => {
   };
 
   return (
+    <ImageBackground
+    source={{ uri: info.image }}
+    style={{ flex: 1 }}>
     <View style={styles.container}>
       {shopCart.length > 0 ? (
         <FlatList
@@ -104,6 +110,7 @@ const ShopCartScreen: React.FC = () => {
         </TouchableOpacity>
       )}
     </View>
+    </ImageBackground>
   );
 };
 
